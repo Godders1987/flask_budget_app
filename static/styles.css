@@ -10,6 +10,19 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+header p {
+  margin-top: 10px;
+}
+
+main {
+  padding: 10px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
