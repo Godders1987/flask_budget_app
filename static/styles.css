@@ -21,3 +21,13 @@ body {
   border-radius: 5px;
   padding: 20px;
 }
+
+.card-label {
+  color: #8b8fa8;
+  font-size: 85%;
+}
+
+.card-value {
+  font-size: 30px;
+  font-weight: bold;
+}
