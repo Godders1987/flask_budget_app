@@ -24,10 +24,11 @@ body {
 
 .card-label {
   color: #8b8fa8;
-  font-size: 85%;
+  font-size: 0.85rem;
 }
 
 .card-value {
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
+  margin-top: 6px;
 }
