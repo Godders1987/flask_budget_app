@@ -48,3 +48,12 @@ main {
   font-weight: bold;
   margin-top: 6px;
 }
+
+.spending_breakdown,
+.transactions {
+  border: 1px solid #2e3142;
+  background-color: #1a1d27;
+  border-radius: 5px;
+  padding: 1.25rem;
+  margin: 20px 0;
+}

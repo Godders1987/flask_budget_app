@@ -17,7 +17,14 @@ def index():
 @app.route('/dashboard')
 def dashboard():
   budget = load_data()
-  return render_template('index.html', budget=budget['monthlyBudget'])
+  total_spend = 0
+  for x in budget:
+    if x[1] == 'Debit':
+      total_spend += x[3]
+    else:
+      total_spend -= x[3]
+  remaining = budget - total_spend
+  return render_template('index.html', budget=budget['monthlyBudget'], remaining=remaining)
 
 if __name__ == '__main__':
   app.run(debug=True, port=5001)
