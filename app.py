@@ -26,7 +26,7 @@ def dashboard():
     else:
       total_spend -= x['amount']
   remaining = budget - total_spend
-  return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend)
+  return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend, transactions=transactions)
 
 if __name__ == '__main__':
   app.run(debug=True, port=5001)
