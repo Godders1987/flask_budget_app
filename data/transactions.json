@@ -1,4 +1,11 @@
 {
   "monthlyBudget": 400,
-  "transactions": []
+  "transactions": [
+    {
+      "date": "2026-04-02",
+      "type": "Debit",
+      "description": "Food",
+      "amount": 35
+    }
+  ]
 }
