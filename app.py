@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import json
+from decimal import Decimal
 
 app = Flask(__name__)
 
@@ -18,13 +19,13 @@ def index():
 def dashboard():
   data = load_data()
   transactions = data['transactions']
-  budget = data['monthlyBudget']
-  total_spend = 0
+  budget = Decimal(data['monthlyBudget'])
+  total_spend = Decimal(0)
   for x in transactions:
     if x['type'] == 'Debit':
-      total_spend += x['amount']
+      total_spend += Decimal(str(x['amount']))
     else:
-      total_spend -= x['amount']
+      total_spend -= Decimal(str(x['amount']))
   remaining = budget - total_spend
   return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend, transactions=transactions)
 
