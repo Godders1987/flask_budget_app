@@ -46,7 +46,12 @@
             </div>
             <p class="transaction_date">{{ transaction['date'] }}</p>
           </div>
-          <p class="transaction_amount">£{{ transaction['amount']}}</p>
+
+          {% if transaction['type'] == 'Credit' %}
+          <p class="transaction_amount_green">+£{{ transaction['amount']}}</p>
+          {% else %}
+          <p class="transaction_amount_red">-£{{ transaction['amount']}}</p>
+          {% endif %}
         </div>
         {% endfor %}
       </div>

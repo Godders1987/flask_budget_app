@@ -101,4 +101,14 @@ main {
 
 .transaction_date {
   margin-top: 5px;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.transaction_amount_red {
+  color: #e24b4a;
+}
+
+.transaction_amount_green {
+  color: #1d9e75;
 }
