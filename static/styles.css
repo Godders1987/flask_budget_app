@@ -57,3 +57,48 @@ main {
   padding: 1.25rem;
   margin: 20px 0;
 }
+
+.transaction_row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #2e3142;
+  padding: 1.5rem 0;
+}
+
+.transaction_top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .transaction_top p {
+  border: red 2px solid;
+}
+
+.transaction_row div {
+  border: red 2px solid;
+} */
+
+.transaction_description {
+  font-weight: 700;
+  /* padding: 5px 15px;
+  text-align: center; */
+}
+
+.transaction_type_credit {
+  background-color: #1d9e75;
+  padding: 1px 10px;
+  border-radius: 25px;
+  margin-left: 0;
+}
+
+.transaction_type_debit {
+  background-color: #e24b4a;
+  padding: 1px 10px;
+  border-radius: 25px;
+  margin-left: 0;
+}
+
+.transaction_date {
+  margin-top: 5px;
+}

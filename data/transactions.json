@@ -6,6 +6,12 @@
       "type": "Debit",
       "description": "Food",
       "amount": 35
+    },
+    {
+      "date": "2026-04-02",
+      "type": "Credit",
+      "description": "Sean",
+      "amount": 12.99
     }
   ]
 }

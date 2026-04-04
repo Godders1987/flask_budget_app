@@ -33,12 +33,20 @@
         <h2>Recent Transactions</h2>
         {% for transaction in transactions %}
         <div class="transaction_row">
-          <p class="transaction_description">
-            {{ transaction['description'] }}
-          </p>
-          <p class="transaction_date">{{ transaction['date'] }}</p>
-          <p class="transaction_type">{{ transaction['type']}}</p>
-          <p class="transaction_amount">{{ transaction['amount']}}</p>
+          <div class="transaction_left">
+            <div class="transaction_top">
+              <p class="transaction_description">
+                {{ transaction['description'] }}
+              </p>
+              {% if transaction['type'] == 'Credit' %}
+              <p class="transaction_type_credit">{{ transaction['type']}}</p>
+              {% else %}
+              <p class="transaction_type_debit">{{ transaction['type']}}</p>
+              {% endif %}
+            </div>
+            <p class="transaction_date">{{ transaction['date'] }}</p>
+          </div>
+          <p class="transaction_amount">£{{ transaction['amount']}}</p>
         </div>
         {% endfor %}
       </div>
