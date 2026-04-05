@@ -58,6 +58,10 @@ main {
   margin: 20px 0;
 }
 
+.transactions h2 {
+  margin-bottom: 10px;
+}
+
 .transaction_row {
   display: flex;
   justify-content: space-between;
