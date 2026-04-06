@@ -75,14 +75,6 @@ main {
   gap: 10px;
 }
 
-/* .transaction_top p {
-  border: red 2px solid;
-}
-
-.transaction_row div {
-  border: red 2px solid;
-} */
-
 .transaction_description {
   font-weight: 700;
   /* padding: 5px 15px;
@@ -115,4 +107,8 @@ main {
 
 .transaction_amount_green {
   color: #1d9e75;
+}
+
+#modal {
+  display: none;
 }
