@@ -55,7 +55,31 @@
         </div>
         {% endfor %}
         <button onclick="openModal()">Add Transactions</button>
-        <div id="modal"><h2>Add Transaction</h2></div>
+        <div id="modal">
+          <h2>Add Transaction</h2>
+          <form action="/add" method="POST">
+            <label for="date">
+              Date of Transaction:
+              <input type="date" / name="date">
+            </label>
+            <label for="type">
+              Type: 
+              <select name="type" id="">
+                <option value="">Transaction type</option>
+                <option value="debit">Debit</option>
+                <option value="credit">Credit</option>
+              </select>
+            </label>
+            <label for="description">
+              Description:
+              <input type="text">
+            </label>
+            <label for="amount">
+              Amount:
+              <input type="number">
+            </label>
+          </form>
+        </div>
       </div>
     </main>
     <script src="/static/scripts.js"></script>
