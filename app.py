@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 import json
 from decimal import Decimal
 from datetime import date
@@ -44,6 +44,19 @@ def dashboard():
       total_spend -= Decimal(str(x['amount']))
   remaining = budget - total_spend
   return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend, transactions=transactions, payday=days_until_payday)
+
+@app.route('/add', methods=['GET', 'POST'])
+def add():
+  if request.method = 'POST':
+    date = request.form['date']
+    transaction_type = request.form['type']
+    description = request.form['description']
+    amount = request.form['amount']
+    data = load_data()
+
+
+
+
 
 if __name__ == '__main__':
   app.run(debug=True, port=5001)
