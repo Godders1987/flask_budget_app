@@ -60,10 +60,10 @@
           <form action="/add" method="POST">
             <label for="date">
               Date of Transaction:
-              <input type="date" name="date">
+              <input type="date" name="date" />
             </label>
             <label for="type">
-              Type: 
+              Type:
               <select name="type" id="">
                 <option value="">Transaction type</option>
                 <option value="Debit">Debit</option>
@@ -72,11 +72,11 @@
             </label>
             <label for="description">
               Description:
-              <input type="text" name="description">
+              <input type="text" name="description" />
             </label>
             <label for="amount">
               Amount:
-              <input type="number" name="amount">
+              <input type="number" name="amount" step="0.01" />
             </label>
             <button type="submit">Save Transaction</button>
           </form>
