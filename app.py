@@ -51,7 +51,7 @@ def add():
     date = request.form['date']
     transaction_type = request.form['type']
     description = request.form['description']
-    amount = request.form['amount']
+    amount = float(request.form['amount'])
     data = load_data()
     data['transactions'].append({
       'date': date,
@@ -61,6 +61,7 @@ def add():
     })
     with open('data/transactions.json', 'w') as f:
       json.dump(data, f)
+  return redirect(url_for('dashboard'))
 
 
 
