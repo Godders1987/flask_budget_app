@@ -1,17 +1,1 @@
-{
-  "monthlyBudget": 400,
-  "transactions": [
-    {
-      "date": "2026-04-02",
-      "type": "Debit",
-      "description": "Food",
-      "amount": 35
-    },
-    {
-      "date": "2026-04-02",
-      "type": "Credit",
-      "description": "Sean",
-      "amount": 12.99
-    }
-  ]
-}
+{"monthlyBudget": 400, "transactions": [{"date": "2026-04-02", "type": "Debit", "description": "Food", "amount": 35}, {"date": "2026-04-02", "type": "Credit", "description": "Sean", "amount": 12.99}, {"date": "2026-04-09", "type": "Debit", "description": "Food", "amount": "12"}, {"date": "2026-04-07", "type": "Credit", "description": "Sean", "amount": "15"}]}
