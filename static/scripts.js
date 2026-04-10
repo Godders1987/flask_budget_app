@@ -1,3 +1,3 @@
 function openModal() {
-  document.getElementById("modal").style.display = "block";
+  document.getElementById("modal").style.display = "flex";
 }
