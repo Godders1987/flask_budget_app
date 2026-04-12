@@ -59,26 +59,26 @@
           <div class="modal_box">
             <h2>Add Transaction</h2>
             <form action="/add" method="POST">
-              <label for="date">
-                Date of Transaction:
-                <input type="date" name="date" />
-              </label>
-              <label for="type">
-                Type:
-                <select name="type" id="">
+              <div class="form_field">
+                <label for="date"> Date of Transaction: </label>
+                <input type="date" name="date" id="date" />
+              </div>
+              <div class="form_field">
+                <label for="type"> Type: </label>
+                <select name="type" id="type">
                   <option value="">Transaction type</option>
                   <option value="Debit">Debit</option>
                   <option value="Credit">Credit</option>
                 </select>
-              </label>
-              <label for="description">
-                Description:
-                <input type="text" name="description" />
-              </label>
-              <label for="amount">
-                Amount:
-                <input type="number" name="amount" step="0.01" />
-              </label>
+              </div>
+              <div class="form_field">
+                <label for="description"> Description: </label>
+                <input type="text" name="description" id="description" />
+              </div>
+              <div class="form_field">
+                <label for="amount"> Amount: </label>
+                <input type="number" name="amount" step="0.01" id="amount" />
+              </div>
               <div class="form_btns">
                 <button type="submit">Save Transaction</button>
                 <button type="reset" onclick="closeModal()">Close</button>

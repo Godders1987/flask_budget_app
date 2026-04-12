@@ -127,11 +127,11 @@ main {
   border: 1px solid #2e3142;
   border-radius: 10px;
   padding: 2rem;
-  max-width: 400px;
+  width: 400px;
 }
 
 .modal_box h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #f0f0f0;
   margin-bottom: 1.5rem;
@@ -140,15 +140,18 @@ main {
 form {
   flex-direction: column;
   display: flex;
-  /* justify-content: space-between; */
   gap: 15px;
-  height: 500px;
+}
+
+.form_field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .modal_box label {
-  /* font-size: 0.75rem; */
   color: #8b8fa8;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 form input,
