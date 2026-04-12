@@ -165,6 +165,17 @@ select {
   width: 100%;
 }
 
+.main_btns {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.875rem;
+  width: 25%;
+  background-color: #5b6ef5;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
 .form_btns {
   display: flex;
   gap: 10px;
