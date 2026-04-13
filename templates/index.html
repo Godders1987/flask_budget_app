@@ -78,17 +78,9 @@
               <div class="form_field">
                 <label for="category">Category:</label>
                 <select name="category" id="category">
-                  <option value="">Chose a category</option>
-                  <option value="housing">Housing</option>
-                  <option value="transport">Transport</option>
-                  <option value="groceries">Groceries</option>
-                  <option value="eating_out">Eating Out</option>
-                  <option value="entertainment">Entertainment</option>
-                  <option value="health">Health</option>
-                  <option value="clothing">Clothing</option>
-                  <option value="savings">Savings</option>
-                  <option value="income">Income</option>
-                  <option value="other">Other</option>
+                  {% for category in categories %}
+                  <option value="{{ category }}">{{ category }}</option>
+                  {% endfor %}
                 </select>
               </div>
               <div class="form_field">
