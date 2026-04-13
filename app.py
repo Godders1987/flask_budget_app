@@ -5,6 +5,8 @@ from datetime import date
 
 app = Flask(__name__)
 
+CATEGORIES = ['Housing', 'Transport', 'Groceries', 'Eating Out', 'Entertainment', 'Health', 'Clothing', 'Savings', 'Income', 'Other']
+
 # Opens and loads the data held in the json file
 def load_data():
   with open('data/transactions.json') as f:
@@ -43,19 +45,21 @@ def dashboard():
     else:
       total_spend -= Decimal(str(x['amount']))
   remaining = budget - total_spend
-  return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend, transactions=transactions, payday=days_until_payday)
+  return render_template('index.html', budget=budget, remaining=remaining, total_spend=total_spend, transactions=transactions, payday=days_until_payday, categories=CATEGORIES)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
   if request.method == 'POST':
     date = request.form['date']
     transaction_type = request.form['type']
+    category = request.form['category']
     description = request.form['description']
     amount = float(request.form['amount'])
     data = load_data()
     data['transactions'].append({
       'date': date,
       'type': transaction_type,
+      'category': category,
       'description': description,
       'amount': amount
     })
