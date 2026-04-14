@@ -67,11 +67,11 @@
             <form action="/add" method="POST">
               <div class="form_field">
                 <label for="date"> Date of Transaction: </label>
-                <input type="date" name="date" id="date" />
+                <input type="date" name="date" id="date" required/>
               </div>
               <div class="form_field">
                 <label for="type"> Type: </label>
-                <select name="type" id="type">
+                <select name="type" id="type" required>
                   <option value="">Transaction type</option>
                   <option value="Debit">Debit</option>
                   <option value="Credit">Credit</option>
@@ -79,7 +79,7 @@
               </div>
               <div class="form_field">
                 <label for="category">Category:</label>
-                <select name="category" id="category">
+                <select name="category" id="category" required>
                   {% for category in categories %}
                   <option value="{{ category }}">{{ category }}</option>
                   {% endfor %}
@@ -87,11 +87,11 @@
               </div>
               <div class="form_field">
                 <label for="description"> Description: </label>
-                <input type="text" name="description" id="description" />
+                <input type="text" name="description" id="description" required/>
               </div>
               <div class="form_field">
                 <label for="amount"> Amount: </label>
-                <input type="number" name="amount" step="0.01" id="amount" />
+                <input type="number" name="amount" step="0.01" id="amount" required/>
               </div>
               <div class="form_btns">
                 <button type="submit">Save Transaction</button>
