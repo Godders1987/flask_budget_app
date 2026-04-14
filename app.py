@@ -5,7 +5,7 @@ from datetime import date
 
 app = Flask(__name__)
 
-CATEGORIES = ['Housing', 'Transport', 'Groceries', 'Eating Out', 'Entertainment', 'Health', 'Clothing', 'Savings', 'Income', 'Other']
+CATEGORIES = ['Chose a category', 'Housing', 'Transport', 'Groceries', 'Eating Out', 'Entertainment', 'Health', 'Clothing', 'Savings', 'Income', 'Other']
 
 # Opens and loads the data held in the json file
 def load_data():
