@@ -65,7 +65,7 @@ def add():
     })
     with open('data/transactions.json', 'w') as f:
       json.dump(data, f)
-  return redirect(url_for('dashboard'))
+    return redirect(url_for('dashboard'))
 
 
 
