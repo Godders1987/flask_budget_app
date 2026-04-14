@@ -47,8 +47,10 @@
               {% else %}
               <p class="transaction_type_debit">{{ transaction['type']}}</p>
               {% endif %}
+              <p class="category">{{ transaction['category'] }}</p>
             </div>
             <p class="transaction_date">{{ transaction['date'] }}</p>
+            
           </div>
 
           {% if transaction['type'] == 'Credit' %}

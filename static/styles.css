@@ -100,6 +100,13 @@ main {
   margin-left: 0;
 }
 
+.category {
+  padding: 1px 10px;
+  border-radius: 25px;
+  margin-left: 0;
+  border: 1px #f0f0f0 solid;
+}
+
 .transaction_date {
   margin-top: 5px;
   font-style: italic;
